@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp
+spec:
+  destination:
+    name: autopilot-cluster-1
+    namespace: argocd
+    server: ''
+  source:
+    path: ''
+    repoURL: 'https://storage.cloud.google.com/helmbucket4'
+    targetRevision: 1.18.0
+    chart: FlaskX
+  sources: []
+  project: myproject
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
