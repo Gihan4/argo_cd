@@ -4,9 +4,9 @@ metadata:
   name: myapp
 spec:
   destination:
-    name: autopilot-cluster-1
+    name: ''
     namespace: argocd
-    server: ''
+    server: 'https://kubernetes.default.svc'
   source:
     path: ''
     repoURL: 'https://storage.cloud.google.com/helmbucket4'
