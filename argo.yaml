@@ -9,12 +9,10 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: ''
-    repoURL: 'https://storage.cloud.google.com/helmbucket4'
-    targetRevision: 1.18.0
+    repoURL: 'https://storage.googleapis.com/helmbucket4'
+    targetRevision: x
     chart: FlaskX
   sources: []
-  project: myproject
+  project: default
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+    automated: null
